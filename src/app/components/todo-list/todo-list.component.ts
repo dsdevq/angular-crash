@@ -10,6 +10,9 @@ export class TodoListComponent implements OnInit {
   constructor(public todoService: TodoService) {}
 
   ngOnInit(): void {
+    if (localStorage.getItem('todos')) {
+      return this.todoService.getLocal();
+    }
     this.todoService.getTodos().subscribe();
   }
 }

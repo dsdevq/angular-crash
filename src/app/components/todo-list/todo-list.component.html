@@ -1,0 +1,5 @@
+<div class="bg-slate-200">
+  <div class="max-w-6xl mx-auto flex flex-col gap-2 p-2 ">
+    <app-todo-item *ngFor="let item of this.todoService.todos" [todo]="item"></app-todo-item>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<div class="flex items-center justify-between mx-auto bg-slate-300 p-2 rounded-lg">
+  <div class="flex gap-3">
+    <input type="checkbox" [checked]="todo.completed" (click)="toggleCompleted(todo.id)">
+    <p>
+      {{ todo.title }}
+    </p>
+  </div>
+  <button class="rounded-full text-4xl" (click)="removeTodo(todo.id)">&times;</button>
+</div>
